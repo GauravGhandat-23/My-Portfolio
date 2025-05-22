@@ -5,32 +5,27 @@ const skillCategories = [
   {
     title: "Programming",
     icon: <Code className="text-cyber-light" size={28} />,
-    skills: ["Python", "SQL", "JavaScript", "Bash Scripting", "PowerShell"],
+    skills: ["Python", "SQL", "PowerShell"],
   },
   {
     title: "Cybersecurity Tools",
     icon: <Shield className="text-cyber-light" size={28} />,
-    skills: ["Metasploit", "Burp Suite", "Wireshark", "Nmap", "Kali Linux", "Snort"],
+    skills: ["Metasploit", "Burp Suite", "Wireshark", "Nmap", "Kali Linux", "Shodan", "Acunetix", "MSF-Venom", "Maltego", "sqlmap"],
   },
   {
     title: "Networking & Security",
     icon: <Network className="text-cyber-light" size={28} />,
-    skills: ["Ethical Hacking", "OSINT", "Cryptography", "Network Security", "Risk Assessment", "Vulnerability Management"],
+    skills: ["Penetration Testing", "Ethical Hacking", "Vulnerability Assessment", "Network Security", "Reconnaissance", "Web Application Security", "OSINT", "Threat Intelligence", "Cryptography", "Secure Authentication", "Linux Security", "System Hardening", "Exploitation and Attack Simulation", "Security Monitoring and Incident Response", "Capture the Flag (CTF) and Practical Hacking"],
   },
   {
     title: "OS & Tools",
     icon: <Terminal className="text-cyber-light" size={28} />,
-    skills: ["Linux", "Windows", "Git", "Docker", "AWS", "AI/ML Tools"],
-  },
-  {
-    title: "Databases",
-    icon: <Database className="text-cyber-light" size={28} />,
-    skills: ["MySQL", "MongoDB", "PostgreSQL", "ElasticSearch"],
+    skills: ["Linux", "Windows", "Git/Github", "AI/ML Tools"],
   },
   {
     title: "Soft Skills",
     icon: <Users className="text-cyber-light" size={28} />,
-    skills: ["Problem-Solving", "Teamwork", "Communication", "Continuous Learning", "Analytical Thinking"],
+    skills: ["Problem-Solving", "Teamwork", "Communication", "Continuous Learning", "Analytical Thinking", "Curiosity and Initiative" ,"Adaptability"],
   }
 ];
 

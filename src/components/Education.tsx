@@ -3,22 +3,19 @@ import { GraduationCap } from "lucide-react";
 
 const education = [
   {
-    degree: "Bachelor of Engineering",
-    institution: "Brahma Valley College",
-    period: "2021 – 2025",
-    description: "Specialized in Computer Science with focus on cybersecurity and AI applications in security."
+    degree: "BACHELOR OF ENGINEERING IN COMPUTER ENGINEERING",
+    institution: "BRAHMA VALLEY COLLEGE OF ENGINEERING & RESEARCH INSTITUTE",
+    period: "2021-22 – 2024-25"
   },
   {
-    degree: "Junior College",
-    institution: "Progressive Science and Commerce",
-    period: "2019 – 2021",
-    description: "Studied science with computer science as a specialization."
+    degree: "MAHARASHTRA STATE BOARD OF HIGHER SECONDARY EDUCATION",
+    institution: "PROGRESSIVE SCIENCE AND COMMERCE JUNIOR COLLEGE",
+    period: "2019 – 2021"
   },
   {
-    degree: "High School",
-    institution: "Deolali High School",
-    period: "2018 – 2019",
-    description: "Completed secondary education with distinction."
+    degree: "MAHARASHTRA STATE BOARD OF SECONDARY EDUCATION",
+    institution: "DEOLALI HIGH SCHOOL",
+    period: "2018 – 2019"
   }
 ];
 

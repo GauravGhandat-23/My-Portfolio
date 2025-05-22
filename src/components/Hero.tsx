@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="mb-4 inline-block py-1 px-3 bg-cyber-accent/20 rounded-full border border-cyber-light/30">
             <span className="text-sm text-cyber-light animate-pulse inline-flex items-center">
               <span className="w-2 h-2 bg-cyber-light rounded-full mr-2"></span>
-              Currently learning Advanced Threat Detection with AI
+              Currently Developing Best AI Powered Cyber security Tools and Projects
             </span>
           </div>
           
@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-cyber-muted mb-6">
-            Aspiring Cybersecurity Engineer | AI-Driven Security Enthusiast | Ethical Hacker
+            Aspiring Cybersecurity Engineer | AI-Driven Cybersecurity Innovator |Aspiring Ethical Hacker
           </h2>
           
           <p className="text-gray-400 mb-8 max-w-lg">

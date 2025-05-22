@@ -24,7 +24,7 @@ const Contact = () => {
                 </a>
                 
                 <a 
-                  href="https://github.com/gauravghandat" 
+                  href="https://github.com/GauravGhandat-23" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-4 text-gray-300 hover:text-cyber-light transition-colors duration-300"
@@ -36,7 +36,7 @@ const Contact = () => {
                 </a>
                 
                 <a 
-                  href="https://linkedin.com/in/gauravghandat" 
+                  href="https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="flex items-center gap-4 text-gray-300 hover:text-cyber-light transition-colors duration-300"

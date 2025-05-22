@@ -15,7 +15,7 @@ const Footer = () => {
           
           <div className="flex space-x-4">
             <a 
-              href="https://github.com/gauravghandat" 
+              href="https://github.com/GauravGhandat-23" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 rounded-full bg-cyber-accent/20 flex items-center justify-center text-gray-300 hover:text-cyber-light hover:bg-cyber-accent/40 transition-colors duration-300"
@@ -23,7 +23,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a 
-              href="https://linkedin.com/in/gauravghandat" 
+              href="https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="w-10 h-10 rounded-full bg-cyber-accent/20 flex items-center justify-center text-gray-300 hover:text-cyber-light hover:bg-cyber-accent/40 transition-colors duration-300"

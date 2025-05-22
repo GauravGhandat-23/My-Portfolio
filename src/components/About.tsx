@@ -14,13 +14,13 @@ const About = () => {
                 Hello! I'm Gaurav Ghandat, an ambitious cybersecurity enthusiast with a passion for AI-driven security solutions. Currently pursuing my Bachelor of Engineering, I focus on developing innovative approaches to combat evolving cyber threats.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                My journey in cybersecurity began with a fascination for how systems could be protected against malicious actors. This led me to explore ethical hacking, penetration testing, and eventually, the application of artificial intelligence in threat detection.
+                I am committed to mastering the art of protecting digital environments. My academic journey is centered on understanding both the technical and security aspects of computing systems.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 I believe that the future of cybersecurity lies at the intersection of human expertise and machine intelligence. My goal is to develop systems that can adapt to new threats in real-time, providing proactive rather than reactive security.
               </p>
               <p className="text-gray-300 leading-relaxed">
-                When I'm not coding or researching security vulnerabilities, I enjoy participating in CTF competitions, contributing to open-source security projects, and mentoring aspiring security professionals.
+                With a solid foundation in computer engineering, I am uniquely positioned to tackle cybersecurity challenges from both a software and hardware perspective. I am constantly learning and applying new skills, from identifying system vulnerabilities to defending against evolving cyber threats.
               </p>
             </div>
           </div>
@@ -32,26 +32,27 @@ const About = () => {
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-cyber-accent rounded-full mt-2 mr-3"></span>
-                    <span className="text-gray-300">Developing AI models for anomaly detection in network traffic</span>
+                    <span className="text-gray-300">Ethical Hacking and Penetration Testing</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-cyber-accent rounded-full mt-2 mr-3"></span>
-                    <span className="text-gray-300">Creating machine learning algorithms to identify phishing attempts</span>
+                    <span className="text-gray-300">Cybersecurity Strategies and Network Defense</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-cyber-accent rounded-full mt-2 mr-3"></span>
-                    <span className="text-gray-300">Automating threat intelligence gathering and analysis</span>
+                    <span className="text-gray-300">Vulnerability Assessment and Incident Response</span>
                   </li>
                   <li className="flex items-start">
                     <span className="w-2 h-2 bg-cyber-accent rounded-full mt-2 mr-3"></span>
-                    <span className="text-gray-300">Implementing secure coding practices in software development</span>
+                    <span className="text-gray-300">Secure Software Development and Cryptography</span>
                   </li>
                 </ul>
               </div>
               
               <div className="mt-10">
                 <a 
-                  href="#" 
+                  href="/resume.pdf"  // Ensure this file exists in your public folder
+                  download
                   className="inline-flex items-center gap-2 px-6 py-3 bg-cyber-secondary hover:bg-cyber-secondary/80 text-white rounded-md transition-all duration-300 shadow-lg shadow-cyber-secondary/20"
                 >
                   <FileText size={18} />
