@@ -1,24 +1,8 @@
-# Welcome to your Lovable project
+👨‍💻 My Portfolio
 
-## Project info
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin )](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)
 
-**URL**: https://lovable.dev/projects/b6bc6465-340d-4d47-96e2-4483108d1473
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/b6bc6465-340d-4d47-96e2-4483108d1473) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Welcome to my GitHub Portfolio! I'm **Gaurav Ghandat**, an aspiring **Cybersecurity Engineer** with a passion for ethical hacking, threat intelligence, and AI-powered security solutions. I’m currently pursuing my **B.E. in Computer Engineering** and actively gaining hands-on experience through internships and self-initiated projects.
 
 Follow these steps:
 
@@ -60,14 +44,12 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## 📫 Connect with Me
 
-Simply open [Lovable](https://lovable.dev/projects/b6bc6465-340d-4d47-96e2-4483108d1473) and click on Share -> Publish.
+- 📧 Email: gauravghandat12@gmail.com  
+- 💼 [LinkedIn](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)  
+- 🧑‍💻 [GitHub](https://github.com/GauravGhandat-23)
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> *“Cybersecurity is not just a profession, it's a mission. Let's make the internet safer—one exploit at a time.”*
