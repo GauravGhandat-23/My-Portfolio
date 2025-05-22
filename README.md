@@ -1,8 +1,39 @@
-👨‍💻 My Portfolio
+# 👨‍💻 My Portfolio
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin )](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)
+---
 
 Welcome to my GitHub Portfolio! I'm **Gaurav Ghandat**, an aspiring **Cybersecurity Engineer** with a passion for ethical hacking, threat intelligence, and AI-powered security solutions. I’m currently pursuing my **B.E. in Computer Engineering** and actively gaining hands-on experience through internships and self-initiated projects.
+---
+
+| **HOME PAGE** |
+|-----------------------------|
+| ![image](https://github.com/user-attachments/assets/6ae8412a-61d4-4ced-bbba-6cbe59ffb52e)|
+
+| **ABOUT SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/b54f3b9a-89f2-4b86-aee2-1aa45e544c5e)|
+
+| **PROJECTS SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/a3575c88-f001-4c10-b1d4-ced816e86972)|
+
+| **CERTIFICATIONS SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/d32c356b-7f01-4917-b769-790e5e7a3d09)|
+
+| **SKILLS SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/c7312a14-b450-489d-a0be-ee469ee8c0a8)|
+
+| **EDUCATION SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/299d20fc-7739-4604-b5f0-83515f0fd68c)|
+
+| **CONTACT SECTION** |
+|-----------------------------|
+|![image](https://github.com/user-attachments/assets/4119e30a-8811-4eb3-b26f-52dd4f51250b)|
+
 
 Follow these steps:
 
