@@ -1,6 +1,6 @@
 # 👨‍💻 My Portfolio
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin )](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-lgfc.vercel.app/)
 ---
 
