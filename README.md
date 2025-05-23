@@ -1,6 +1,7 @@
 # 👨‍💻 My Portfolio
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin )](https://www.linkedin.com/in/gaurav-ghandat-68a5a22b4/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-000?style=for-the-badge&logo=vercel&logoColor=white)](https://my-portfolio-lgfc.vercel.app/)
 ---
 
 Welcome to my GitHub Portfolio! I'm **Gaurav Ghandat**, an aspiring **Cybersecurity Engineer** with a passion for ethical hacking, threat intelligence, and AI-powered security solutions. I’m currently pursuing my **B.E. in Computer Engineering** and actively gaining hands-on experience through internships and self-initiated projects.
