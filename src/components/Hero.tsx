@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-xl md:text-2xl text-cyber-muted mb-6">
-            Aspiring Cybersecurity Engineer | AI-Driven Cybersecurity Innovator |Aspiring Ethical Hacker
+          🛡 Cyber Defender | Ethical Hacker | AI x Cybersecurity Innovator | Building Secure Digital Futures 🔐
           </h2>
           
           <p className="text-gray-400 mb-8 max-w-lg">

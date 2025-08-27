@@ -11,7 +11,7 @@ const About = () => {
           <div className="w-full lg:w-1/2">
             <div className="cyber-card h-full">
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Hello! I'm Gaurav Ghandat, an ambitious cybersecurity enthusiast with a passion for AI-driven security solutions. Currently pursuing my Bachelor of Engineering, I focus on developing innovative approaches to combat evolving cyber threats.
+                Hello! I'm Gaurav Ghandat, an ambitious cybersecurity enthusiast with a passion for AI-driven security solutions. I'm a Computer Engineering graduate with a strong passion for cybersecurity and ethical hacking. With a solid understanding of both software and hardware systems, I focus on developing innovative approaches to combat evolving cyber threats.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 I am committed to mastering the art of protecting digital environments. My academic journey is centered on understanding both the technical and security aspects of computing systems.
