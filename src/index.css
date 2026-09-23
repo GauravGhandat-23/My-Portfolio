@@ -1,37 +1,39 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
+    --background: 215 50% 6%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 215 50% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 215 50% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 263 84% 75%;
-    --primary-foreground: 222 47% 11%;
+    --primary: 193 100% 50%;
+    --primary-foreground: 215 50% 6%;
 
-    --secondary: 199 75% 49%;
+    --secondary: 263 84% 56%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 30% 18%;
+    --muted-foreground: 215 20% 60%;
 
-    --accent: 263 84% 63%;
+    --accent: 263 84% 56%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 263 84% 63%;
+    --border: 215 30% 15%;
+    --input: 215 30% 12%;
+    --ring: 193 100% 50%;
 
     --radius: 0.5rem;
   }
@@ -40,10 +42,14 @@
 @layer base {
   * {
     @apply border-border;
+    box-sizing: border-box;
   }
 
   body {
-    @apply bg-cyber-dark text-foreground bg-cyber-grid;
+    @apply bg-cyber-navy text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: #0A0F1E;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300D4FF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
   html {
@@ -51,32 +57,332 @@
   }
 
   section {
-    @apply py-16;
+    @apply py-20;
   }
+}
 
-  .container {
-    @apply px-4 lg:px-8;
-  }
-
+@layer components {
+  /* ── Section Titles ── */
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-6 text-cyber-light relative inline-block;
+    @apply text-3xl md:text-4xl font-bold mb-4 text-white relative inline-block;
   }
 
-  .section-title::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-cyber-accent rounded-full;
+  .section-title span {
+    @apply text-cyber-light;
   }
 
+  .section-title-line {
+    @apply h-0.5 w-16 bg-gradient-to-r from-cyber-light to-transparent rounded-full mt-3;
+  }
+
+  /* ── Cyber Cards ── */
   .cyber-card {
-    @apply bg-cyber-darker/80 backdrop-blur-sm border border-cyber-light/20 rounded-lg p-6 hover:shadow-lg hover:shadow-cyber-light/10 transition-all duration-300;
+    @apply rounded-xl p-6 border transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(13,21,36,0.9) 0%, rgba(6,11,20,0.95) 100%);
+    border-color: rgba(0,212,255,0.15);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
   }
 
+  .cyber-card:hover {
+    border-color: rgba(0,212,255,0.35);
+    box-shadow: 0 8px 40px rgba(0,212,255,0.12), 0 4px 24px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+  }
+
+  .cyber-card-violet {
+    @apply rounded-xl p-6 border transition-all duration-300;
+    background: linear-gradient(135deg, rgba(13,21,36,0.9) 0%, rgba(10,10,30,0.95) 100%);
+    border-color: rgba(124,58,237,0.2);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+  }
+
+  .cyber-card-violet:hover {
+    border-color: rgba(124,58,237,0.45);
+    box-shadow: 0 8px 40px rgba(124,58,237,0.15);
+    transform: translateY(-2px);
+  }
+
+  /* ── Badges ── */
   .cyber-badge {
-    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-cyber-accent/20 text-cyber-light border border-cyber-light/30 cursor-pointer transition-all duration-300 hover:bg-cyber-accent/40;
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium transition-all duration-300 cursor-default;
+    background: rgba(0,212,255,0.08);
+    border: 1px solid rgba(0,212,255,0.25);
+    color: #00D4FF;
   }
 
+  .cyber-badge:hover {
+    background: rgba(0,212,255,0.18);
+    border-color: rgba(0,212,255,0.5);
+  }
+
+  .cyber-badge-violet {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+    background: rgba(124,58,237,0.12);
+    border: 1px solid rgba(124,58,237,0.3);
+    color: #8B5CF6;
+  }
+
+  .cyber-badge-green {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+    background: rgba(0,255,136,0.1);
+    border: 1px solid rgba(0,255,136,0.3);
+    color: #00FF88;
+  }
+
+  .cyber-badge-red {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+    background: rgba(255,51,102,0.1);
+    border: 1px solid rgba(255,51,102,0.3);
+    color: #FF3366;
+  }
+
+  .cyber-badge-orange {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+    background: rgba(255,140,0,0.1);
+    border: 1px solid rgba(255,140,0,0.3);
+    color: #FF8C00;
+  }
+
+  /* ── Text Gradients ── */
   .text-gradient {
     @apply bg-gradient-to-r from-cyber-light to-cyber-secondary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-violet {
+    @apply bg-gradient-to-r from-cyber-violet to-cyber-accent bg-clip-text text-transparent;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(135deg, #00D4FF, #00B4D8);
+    color: #060B14;
+    box-shadow: 0 0 20px rgba(0,212,255,0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(0,212,255,0.5);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300;
+    background: transparent;
+    border: 1px solid rgba(0,212,255,0.4);
+    color: #00D4FF;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(0,212,255,0.08);
+    border-color: rgba(0,212,255,0.7);
+    box-shadow: 0 0 15px rgba(0,212,255,0.2);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm transition-all duration-300;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(255,255,255,0.3);
+    color: white;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* ── Terminal ── */
+  .terminal-window {
+    @apply rounded-xl overflow-hidden;
+    background: #060B14;
+    border: 1px solid rgba(0,212,255,0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,212,255,0.05);
+  }
+
+  .terminal-header {
+    @apply flex items-center gap-2 px-4 py-3;
+    background: #0A0F1E;
+    border-bottom: 1px solid rgba(0,212,255,0.1);
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .terminal-body {
+    @apply p-4 font-mono text-sm;
+    color: #00D4FF;
+    min-height: 200px;
+  }
+
+  .terminal-prompt {
+    color: #00FF88;
+  }
+
+  .terminal-text {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    color: #00D4FF;
+  }
+
+  .terminal-log-alert { color: #FF3366; }
+  .terminal-log-info { color: #00D4FF; }
+  .terminal-log-warn { color: #FF8C00; }
+  .terminal-log-success { color: #00FF88; }
+  .terminal-log-detect { color: #8B5CF6; }
+
+  /* ── SOC Dashboard ── */
+  .soc-metric-card {
+    @apply rounded-lg p-4 text-center transition-all duration-300;
+    background: rgba(0,212,255,0.04);
+    border: 1px solid rgba(0,212,255,0.15);
+  }
+
+  .soc-metric-card:hover {
+    background: rgba(0,212,255,0.08);
+    border-color: rgba(0,212,255,0.3);
+  }
+
+  .soc-metric-value {
+    @apply text-3xl font-bold font-mono;
+    color: #00D4FF;
+  }
+
+  .soc-metric-label {
+    @apply text-xs uppercase tracking-widest mt-1;
+    color: rgba(107,122,153,0.9);
+  }
+
+  /* ── Glows ── */
+  .cyber-border {
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 0.5rem;
+  }
+
+  .cyber-glow {
+    box-shadow: 0 0 20px rgba(0,212,255,0.2);
+  }
+
+  .cyber-glow-violet {
+    box-shadow: 0 0 20px rgba(124,58,237,0.3);
+  }
+
+  /* ── Animate on scroll ── */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── Status indicators ── */
+  .status-online {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium;
+    color: #00FF88;
+  }
+
+  .status-dot {
+    @apply w-2 h-2 rounded-full;
+    background: #00FF88;
+    box-shadow: 0 0 6px #00FF88;
+    animation: pulse 2s infinite;
+  }
+
+  /* ── MITRE ATT&CK ── */
+  .mitre-cell {
+    @apply rounded p-2 text-xs cursor-pointer transition-all duration-200 text-center;
+    background: rgba(0,212,255,0.05);
+    border: 1px solid rgba(0,212,255,0.1);
+    color: rgba(255,255,255,0.7);
+  }
+
+  .mitre-cell:hover {
+    background: rgba(0,212,255,0.15);
+    border-color: rgba(0,212,255,0.4);
+    color: #00D4FF;
+    transform: scale(1.02);
+  }
+
+  .mitre-cell.active {
+    background: rgba(0,212,255,0.2);
+    border-color: rgba(0,212,255,0.6);
+    color: #00D4FF;
+  }
+
+  .mitre-tactic-header {
+    @apply text-xs font-bold uppercase tracking-wider p-2 text-center rounded;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.3);
+    color: #8B5CF6;
+  }
+
+  /* ── Timeline ── */
+  .timeline-node {
+    @apply w-4 h-4 rounded-full border-2 flex-shrink-0 transition-all duration-300;
+    border-color: #00D4FF;
+    background: #060B14;
+    box-shadow: 0 0 8px rgba(0,212,255,0.4);
+  }
+
+  .timeline-node.active {
+    background: #00D4FF;
+    box-shadow: 0 0 16px rgba(0,212,255,0.8);
+  }
+
+  .timeline-connector {
+    @apply w-0.5 flex-shrink-0;
+    background: linear-gradient(to bottom, rgba(0,212,255,0.5), rgba(0,212,255,0.1));
+  }
+
+  /* ── Network Diagram ── */
+  .network-node {
+    @apply rounded-xl p-3 text-center text-xs font-medium transition-all duration-300 cursor-default;
+    background: rgba(13,21,36,0.9);
+    border: 1px solid rgba(0,212,255,0.25);
+    color: #00D4FF;
+    backdrop-filter: blur(4px);
+  }
+
+  .network-node:hover {
+    border-color: rgba(0,212,255,0.6);
+    box-shadow: 0 0 20px rgba(0,212,255,0.2);
+  }
+
+  /* ── Skill nodes ── */
+  .skill-node {
+    @apply rounded-lg px-3 py-2 text-xs font-medium text-center cursor-pointer transition-all duration-200;
+    background: rgba(0,212,255,0.06);
+    border: 1px solid rgba(0,212,255,0.15);
+    color: rgba(255,255,255,0.75);
+  }
+
+  .skill-node:hover {
+    background: rgba(0,212,255,0.15);
+    border-color: rgba(0,212,255,0.4);
+    color: #00D4FF;
+    transform: scale(1.05);
+  }
+
+  /* ── Scrollbar ── */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #060B14;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0,212,255,0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,212,255,0.5);
   }
 }
 
@@ -84,16 +390,22 @@
   .cyber-border {
     @apply border border-cyber-light/30 rounded-md;
   }
-  
+
   .cyber-glow {
-    @apply shadow-lg shadow-cyber-light/20;
+    box-shadow: 0 0 20px rgba(0,212,255,0.2);
   }
-  
-  .animate-on-scroll {
-    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+
+  .font-mono-cyber {
+    font-family: 'JetBrains Mono', monospace;
   }
-  
-  .animate-on-scroll.visible {
-    @apply opacity-100 translate-y-0;
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }
