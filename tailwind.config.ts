@@ -25,6 +25,15 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				luxury: {
+					bg: 'var(--bg-main)',
+					surface: 'var(--bg-surface)',
+					text: 'var(--text-primary)',
+					secondary: 'var(--text-secondary)',
+					border: 'var(--border-subtle)',
+					accent: 'var(--accent)',
+					red: '#D9381E',
+				},
 				cyber: {
 					dark: '#0D1117',
 					darker: '#060B14',
@@ -80,8 +89,12 @@ export default {
 				}
 			},
 			fontFamily: {
-				sans: ['Inter', 'system-ui', 'sans-serif'],
-				mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+				sans: ['Manrope', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'Fira Code', 'monospace'],
+				display: ['Manrope', 'Inter', 'sans-serif'],
+				headline: ['Manrope', '"Space Grotesk"', 'Inter', 'sans-serif'],
+				heading: ['"Space Grotesk"', 'Manrope', 'sans-serif'],
+				syne: ['Manrope', 'sans-serif'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

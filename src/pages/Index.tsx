@@ -1,81 +1,91 @@
-
 import { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import SOCCommandCenter from "@/components/SOCCommandCenter";
-import Skills from "@/components/Skills";
-import ExperienceTimeline from "@/components/ExperienceTimeline";
-import Projects from "@/components/Projects";
-import CaseStudies from "@/components/CaseStudies";
-import MitreAttackMap from "@/components/MitreAttackMap";
-import IncidentTimeline from "@/components/IncidentTimeline";
-import Certifications from "@/components/Certifications";
-import SecurityLab from "@/components/SecurityLab";
-import InteractiveTerminal from "@/components/InteractiveTerminal";
-import SecurityToolkit from "@/components/SecurityToolkit";
-import NetworkVisualization from "@/components/NetworkVisualization";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Lenis from "lenis";
+import LuxuryNav from "@/components/luxury/LuxuryNav";
+import LuxuryHero from "@/components/luxury/LuxuryHero";
+import LuxuryAbout from "@/components/luxury/LuxuryAbout";
+import LuxuryExpertise from "@/components/luxury/LuxuryExpertise";
+import LuxuryProjects from "@/components/luxury/LuxuryProjects";
+import LuxuryCertifications from "@/components/luxury/LuxuryCertifications";
+import LuxuryContact from "@/components/luxury/LuxuryContact";
+import AmbientCursor from "@/components/AmbientCursor";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Gaurav Ghandat | SOC Analyst | Cybersecurity & Blue Team";
+    document.title = "Gaurav Ghandat — Cybersecurity & Defensive Security Operations";
 
-    // Scroll-reveal animation using IntersectionObserver
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
-    );
+    // Lenis Smooth Scrolling Engine
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let lenis: Lenis | null = null;
+    let rafId: number;
 
-    const elements = document.querySelectorAll(".animate-on-scroll");
-    elements.forEach((el) => observer.observe(el));
+    if (!prefersReduced) {
+      lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: 0.9,
+        touchMultiplier: 1.1,
+        infinite: false,
+      });
 
-    return () => observer.disconnect();
+      (window as any).__lenis = lenis;
+
+      const raf = (time: number) => {
+        lenis?.raf(time);
+        rafId = requestAnimationFrame(raf);
+      };
+      rafId = requestAnimationFrame(raf);
+    }
+
+    return () => {
+      if (rafId) cancelAnimationFrame(rafId);
+      if (lenis) {
+        lenis.destroy();
+        delete (window as any).__lenis;
+      }
+    };
   }, []);
 
   return (
-    <div
-      className="min-h-screen text-white"
-      style={{ background: "#0A0F1E" }}
-    >
+    <div className="min-h-screen text-[var(--text-primary)] bg-[var(--bg-main)] selection:bg-[var(--text-primary)] selection:text-[var(--bg-main)] relative transition-colors duration-300">
+      {/* Precision luxury ambient pointer cursor */}
+      <AmbientCursor />
+
       {/* Skip to main content — Accessibility */}
       <a
-        href="#home"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:rounded-lg focus:text-white focus:text-sm"
-        style={{ background: "#00D4FF", color: "#060B14" }}
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[var(--text-primary)] focus:text-[var(--bg-main)] focus:font-mono focus:text-xs tracking-wider"
       >
         Skip to main content
       </a>
 
-      <Navbar />
+      {/* Jaguar-Inspired Minimal Navigation */}
+      <LuxuryNav />
 
+      {/* Main Luxury Content Flow */}
       <main id="main-content">
-        <Hero />
-        <About />
-        <SOCCommandCenter />
-        <Skills />
-        <ExperienceTimeline />
-        <Projects />
-        <CaseStudies />
-        <MitreAttackMap />
-        <IncidentTimeline />
-        <Certifications />
-        <SecurityLab />
-        <InteractiveTerminal />
-        <SecurityToolkit />
-        <NetworkVisualization />
-        <Contact />
+        {/* Full-Screen Asymmetric Editorial Hero */}
+        <LuxuryHero />
+
+        {/* 01: About & Identity — "ORIGINAL THINKING. SECURE EXECUTION." */}
+        <LuxuryAbout />
+
+        {/* 02: Areas of Expertise — Clean Minimal Horizontal Typography Rows */}
+        <LuxuryExpertise />
+
+        {/* 03: Selected Work — Luxury Product Composition Showcase */}
+        <LuxuryProjects />
+
+        {/* 04: Professional Development — 11 Authentic Accreditations */}
+        <LuxuryCertifications />
+
+        {/* 05: Contact & Dialogue — "LET'S CREATE A MORE SECURE FUTURE." */}
+        <LuxuryContact />
       </main>
 
-      <Footer />
       <ScrollToTop />
     </div>
   );

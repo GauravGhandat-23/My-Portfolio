@@ -7,35 +7,37 @@
 
 @layer base {
   :root {
-    --background: 215 50% 6%;
-    --foreground: 210 40% 98%;
+    /* ── Pure White Luxury Design System (Jaguar-Inspired) ── */
+    --bg-main: #FFFFFF;
+    --bg-secondary: #F8F8F7;
+    --bg-surface: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-card-hover: #F1F1F1;
+    --bg-hover: #F1F1F1;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --text-muted: #888888;
+    --border-subtle: #E5E5E5;
+    --border-accent: #111111;
+    --accent: #222222;
+    --accent-red: #D9381E;
 
-    --card: 215 50% 8%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 215 50% 8%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 193 100% 50%;
-    --primary-foreground: 215 50% 6%;
-
-    --secondary: 263 84% 56%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 215 30% 18%;
-    --muted-foreground: 215 20% 60%;
-
-    --accent: 263 84% 56%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 215 30% 15%;
-    --input: 215 30% 12%;
-    --ring: 193 100% 50%;
-
-    --radius: 0.5rem;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 4% 97%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 40 4% 97%;
+    --muted-foreground: 0 0% 40%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 7%;
+    --radius: 0rem;
   }
 }
 
@@ -46,22 +48,86 @@
   }
 
   body {
-    @apply bg-cyber-navy text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
-    background-color: #0A0F1E;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300D4FF' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    font-family: 'Manrope', 'Inter', system-ui, sans-serif;
+    background-color: #FFFFFF;
+    color: #111111;
+    overflow-x: hidden;
+    max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-
-  section {
-    @apply py-20;
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: #FFFFFF;
+    color: #111111;
   }
 }
 
 @layer components {
+  /* ── Jaguar-Inspired Pure White Luxury UI Elements ── */
+  .luxury-btn-primary {
+    @apply inline-flex items-center justify-center gap-2.5 px-8 py-4 text-[11px] font-mono font-medium tracking-[0.22em] uppercase transition-all duration-300 rounded-none cursor-pointer;
+    background-color: #111111;
+    color: #FFFFFF;
+    border: 1px solid #111111;
+  }
+  .luxury-btn-primary:hover {
+    background-color: #262626;
+    border-color: #262626;
+    color: #FFFFFF;
+  }
+
+  .luxury-btn-secondary {
+    @apply inline-flex items-center justify-center gap-2.5 px-8 py-4 text-[11px] font-mono font-medium tracking-[0.22em] uppercase transition-all duration-300 rounded-none cursor-pointer;
+    background-color: #FFFFFF;
+    color: #111111;
+    border: 1px solid #111111;
+  }
+  .luxury-btn-secondary:hover {
+    background-color: #F1F1F1;
+    border-color: #111111;
+    color: #111111;
+  }
+
+  .luxury-link {
+    @apply relative inline-flex items-center gap-1.5 text-xs font-mono tracking-[0.2em] uppercase transition-colors duration-200 cursor-pointer;
+    color: #111111;
+  }
+  .luxury-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #111111;
+    transition: width 250ms cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .luxury-link:hover::after {
+    width: 100%;
+  }
+
+  .luxury-section-title {
+    @apply font-headline text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-tight uppercase leading-[0.96];
+    color: #111111;
+  }
+
+  .luxury-section-label {
+    @apply text-[11px] font-mono tracking-[0.28em] uppercase font-semibold mb-3 block;
+    color: #666666;
+  }
+
+  .luxury-border-t {
+    border-top: 1px solid #E5E5E5;
+  }
+
+  .luxury-border-b {
+    border-bottom: 1px solid #E5E5E5;
+  }
+
   /* ── Section Titles ── */
   .section-title {
     @apply text-3xl md:text-4xl font-bold mb-4 text-white relative inline-block;
@@ -84,10 +150,23 @@
     backdrop-filter: blur(8px);
   }
 
+  .light .cyber-card,
+  [data-theme="light"] .cyber-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #E2E8F0;
+    box-shadow: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.03);
+  }
+
   .cyber-card:hover {
     border-color: rgba(0,212,255,0.35);
     box-shadow: 0 8px 40px rgba(0,212,255,0.12), 0 4px 24px rgba(0,0,0,0.4);
     transform: translateY(-2px);
+  }
+
+  .light .cyber-card:hover,
+  [data-theme="light"] .cyber-card:hover {
+    border-color: rgba(8, 145, 178, 0.45);
+    box-shadow: 0 16px 36px -4px rgba(8, 145, 178, 0.12), 0 4px 12px rgba(15, 23, 42, 0.05);
   }
 
   .cyber-card-violet {
@@ -387,6 +466,79 @@
 }
 
 @layer utilities {
+  .text-outline {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.9);
+    color: transparent;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  }
+
+  .light .text-outline,
+  [data-theme="light"] .text-outline {
+    -webkit-text-stroke: 1.5px rgba(17, 24, 39, 0.9);
+    color: transparent;
+    text-shadow: none;
+  }
+
+  .text-outline-thin {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+    color: transparent;
+  }
+
+  .light .text-outline-thin,
+  [data-theme="light"] .text-outline-thin {
+    -webkit-text-stroke: 1px rgba(17, 24, 39, 0.45);
+    color: transparent;
+  }
+
+  .text-outline-amber {
+    -webkit-text-stroke: 1.5px rgba(255, 170, 40, 0.7);
+    color: transparent;
+  }
+
+  .light .text-outline-amber,
+  [data-theme="light"] .text-outline-amber {
+    -webkit-text-stroke: 1.5px rgba(217, 119, 6, 0.9);
+    color: transparent;
+  }
+
+  .text-outline-cyan {
+    -webkit-text-stroke: 1.5px rgba(0, 212, 255, 0.7);
+    color: transparent;
+  }
+
+  .light .text-outline-cyan,
+  [data-theme="light"] .text-outline-cyan {
+    -webkit-text-stroke: 1.5px rgba(8, 145, 178, 0.9);
+    color: transparent;
+  }
+
+  .text-outline-dark {
+    -webkit-text-stroke: 1.5px rgba(50, 20, 20, 0.6);
+    color: transparent;
+  }
+
+  .font-display {
+    font-family: 'Bebas Neue', 'Anton', sans-serif;
+    letter-spacing: 0.03em;
+  }
+
+  .font-headline {
+    font-family: 'Anton', 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-syne {
+    font-family: 'Syne', sans-serif;
+  }
+
+  .grain-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+
   .cyber-border {
     @apply border border-cyber-light/30 rounded-md;
   }
@@ -399,6 +551,24 @@
     font-family: 'JetBrains Mono', monospace;
   }
 
+  @keyframes pulseGlow {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.05); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 4s ease-in-out infinite;
+  }
+
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(1000%); }
+  }
+
+  .animate-scanline {
+    animation: scanline 6s linear infinite;
+  }
+
   @media (prefers-reduced-motion: reduce) {
     *,
     ::before,
@@ -406,6 +576,28 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
+  }
+
+  /* ── Lenis Smooth Scrolling Core ── */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
   }
 }
