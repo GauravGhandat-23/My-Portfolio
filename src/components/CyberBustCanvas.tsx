@@ -161,7 +161,7 @@ export const CyberBustCanvas = ({
     }
 
     let rotY = 0;
-    let rotX = 0;
+    const rotX = 0;
 
     const render = () => {
       rotY += 0.008;
@@ -191,12 +191,12 @@ export const CyberBustCanvas = ({
         const p = points[i];
 
         // Rotate Y
-        let x1 = p.x * cosY - p.z * sinY;
-        let z1 = p.z * cosY + p.x * sinY;
+        const x1 = p.x * cosY - p.z * sinY;
+        const z1 = p.z * cosY + p.x * sinY;
 
         // Rotate X
-        let y1 = p.y * cosX - z1 * sinX;
-        let z2 = z1 * cosX + p.y * sinX + 320;
+        const y1 = p.y * cosX - z1 * sinX;
+        const z2 = z1 * cosX + p.y * sinX + 320;
 
         if (z2 <= 0) continue;
 
