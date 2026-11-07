@@ -5,16 +5,16 @@ import { ArrowRight, ArrowDown, Sparkles } from "lucide-react";
 export const LuxuryHero = () => {
   const containerRef = useRef<HTMLElement>(null);
   
-  // Interactive Palette Mode: "bw" (Black & White), "color" (Natural Color), "noir" (Cinematic Noir)
-  const [paletteMode, setPaletteMode] = useState<"bw" | "color" | "noir">("bw");
+  // Interactive Palette Mode: "color" (Natural Color), "bw" (Classic Black & White), "noir" (Cinematic Noir)
+  const [paletteMode, setPaletteMode] = useState<"color" | "bw" | "noir">("color");
 
   const cyclePalette = () => {
-    if (paletteMode === "bw") {
-      setPaletteMode("color");
-    } else if (paletteMode === "color") {
+    if (paletteMode === "color") {
+      setPaletteMode("bw");
+    } else if (paletteMode === "bw") {
       setPaletteMode("noir");
     } else {
-      setPaletteMode("bw");
+      setPaletteMode("color");
     }
   };
 
@@ -33,12 +33,12 @@ export const LuxuryHero = () => {
   const getFilterStyle = () => {
     switch (paletteMode) {
       case "color":
-        return "grayscale-0 contrast-[102%] brightness-[101%]";
+        return "grayscale-0 contrast-[100%] brightness-[100%]";
       case "noir":
-        return "grayscale contrast-[142%] brightness-[94%]";
+        return "grayscale contrast-[135%] brightness-[96%]";
       case "bw":
       default:
-        return "grayscale contrast-[112%] brightness-[101%]";
+        return "grayscale contrast-[110%] brightness-[100%]";
     }
   };
 
@@ -140,19 +140,19 @@ export const LuxuryHero = () => {
             </div>
           </motion.div>
 
-          {/* ── Right Column: Unique Architectural Luxury Frame with Interactive B&W / Color Switch ── */}
+          {/* ── Right Column: Clean, Elegant Rectangular Portrait Frame with Subtle Rounded Corners ── */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 20 }}
+            initial={{ opacity: 0, scale: 0.97, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1.1, delay: 0.15, ease: [0.25, 1, 0.5, 1] }}
             className="lg:col-span-5 flex flex-col items-center lg:items-end justify-center w-full"
           >
-            <div className="relative w-full max-w-[440px] sm:max-w-[480px] lg:max-w-[500px] xl:max-w-[520px]">
+            <div className="relative w-full max-w-[380px] sm:max-w-[420px] md:max-w-[440px] lg:max-w-[460px] xl:max-w-[480px]">
               
-              {/* Floating Architectural Offset Accent Border */}
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-full h-full border border-[#111111]/25 pointer-events-none transition-transform duration-500 group-hover:translate-x-1 group-hover:translate-y-1" />
+              {/* Subtle Architectural Offset Accent Outline with matching rounded corners */}
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-full h-full rounded-xl border border-[#111111]/15 pointer-events-none transition-transform duration-500 group-hover:translate-x-1 group-hover:translate-y-1" />
 
-              {/* Main Luxury Frame Box (Clickable Interactive Canvas) */}
+              {/* Main Luxury Frame Box with slightly rounded corners */}
               <motion.div
                 whileTap={{ scale: 0.985 }}
                 onClick={cyclePalette}
@@ -164,15 +164,15 @@ export const LuxuryHero = () => {
                     cyclePalette();
                   }
                 }}
-                className="relative bg-[#FFFFFF] border border-[#111111] p-3 sm:p-4 shadow-xl cursor-pointer select-none group"
-                title="Click photo to toggle: Black & White · Natural Color · Cinematic Noir"
-                aria-label="Profile photo of Gaurav Ghandat. Click to switch palette modes: Black & White, Natural Color, and Noir."
+                className="relative bg-[#FFFFFF] rounded-xl border border-[#111111]/80 p-3 sm:p-4 shadow-xl hover:shadow-2xl transition-all duration-500 cursor-pointer select-none group"
+                title="Click photo to toggle: Natural Color · Classic B&W · Cinematic Noir"
+                aria-label="Profile photo of Gaurav Ghandat. Click to switch palette modes: Natural Color, Black & White, and Noir."
               >
                 {/* 4 Architectural Precision Corner Registration Notches */}
-                <span className="absolute -top-1 -left-1 w-3.5 h-3.5 border-t-2 border-l-2 border-[#111111] pointer-events-none" />
-                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 border-t-2 border-r-2 border-[#111111] pointer-events-none" />
-                <span className="absolute -bottom-1 -left-1 w-3.5 h-3.5 border-b-2 border-l-2 border-[#111111] pointer-events-none" />
-                <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 border-b-2 border-r-2 border-[#111111] pointer-events-none" />
+                <span className="absolute -top-1 -left-1 w-3.5 h-3.5 border-t-2 border-l-2 border-[#111111] rounded-tl-sm pointer-events-none" />
+                <span className="absolute -top-1 -right-1 w-3.5 h-3.5 border-t-2 border-r-2 border-[#111111] rounded-tr-sm pointer-events-none" />
+                <span className="absolute -bottom-1 -left-1 w-3.5 h-3.5 border-b-2 border-l-2 border-[#111111] rounded-bl-sm pointer-events-none" />
+                <span className="absolute -bottom-1 -right-1 w-3.5 h-3.5 border-b-2 border-r-2 border-[#111111] rounded-br-sm pointer-events-none" />
 
                 {/* Top Inscription Header */}
                 <div className="pb-2.5 px-0.5 flex items-center justify-between text-[10px] font-mono tracking-[0.2em] uppercase text-[#666666] border-b border-[#E5E5E5] mb-2.5">
@@ -188,17 +188,17 @@ export const LuxuryHero = () => {
                   </div>
                 </div>
 
-                {/* Photo Viewport with Interactive Transition Filter */}
-                <div className="relative w-full aspect-square overflow-hidden bg-[#F8F8F7] border border-[#E5E5E5]/80">
+                {/* Photo Viewport: Clean, elegant rectangular portrait with slightly rounded corners */}
+                <div className="relative w-full aspect-[4/5] sm:aspect-square md:aspect-[4/5] rounded-lg overflow-hidden bg-[#F8F8F7] border border-[#E5E5E5]/90">
                   <img
                     src="/gaurav-original.jpg"
                     alt="Gaurav Ghandat — Cybersecurity Professional & SOC Analyst"
-                    className={`w-full h-full object-cover object-top transition-all duration-700 ease-out group-hover:scale-[1.02] ${getFilterStyle()}`}
+                    className={`w-full h-full object-cover object-[center_20%] transition-all duration-700 ease-out group-hover:scale-[1.025] ${getFilterStyle()}`}
                     loading="eager"
                   />
 
                   {/* Mode Change Pulse Overlay */}
-                  <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#111111]/85 text-[#FFFFFF] backdrop-blur-md text-[9px] font-mono tracking-[0.2em] uppercase flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute top-3 right-3 px-2.5 py-1 bg-[#111111]/85 text-[#FFFFFF] rounded-md backdrop-blur-md text-[9px] font-mono tracking-[0.2em] uppercase flex items-center gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
                     <span
                       className="w-1.5 h-1.5 rounded-full transition-colors duration-300"
                       style={{
@@ -212,7 +212,7 @@ export const LuxuryHero = () => {
                     />
                     <span>
                       {paletteMode === "color"
-                        ? "SPECTRUM COLOR"
+                        ? "NATURAL COLOR"
                         : paletteMode === "noir"
                         ? "CINEMATIC NOIR"
                         : "CLASSIC B&W"}
